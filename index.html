@@ -1,0 +1,612 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>SafeBrok · Únete al equipo</title>
+<meta name="description" content="Presentación de reclutamiento para asesores inmobiliarios de SafeBrok México.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Deck SafeBrok · navegación por scroll (touch), dark-first navy/cian + acento eco. ~412px (Huawei Pura 70 Ultra). */
+:root{
+  --bg:#0a1526;--bg-2:#0f2038;--surface:#13263f;--surface-2:#17304f;
+  --fg:#eaf2fb;--muted:#9db4cf;--faint:#6f89a8;
+  --accent:#26a8e6;--accent-2:#63d2ff;--eco:#49c17a;--eco-2:#7fe0a5;
+  --wa:#25d366;--good:#3ddc97;--warn:#ffbf47;
+  --line:rgba(255,255,255,.10);--line-2:rgba(255,255,255,.06);--glow:rgba(38,168,230,.30);
+  --img-veil:linear-gradient(180deg,rgba(10,21,38,.28),rgba(10,21,38,.86));
+  --shadow:0 18px 50px -24px rgba(0,0,0,.7);color-scheme:dark;
+}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
+  --bg:#eef4fb;--bg-2:#fff;--surface:#fff;--surface-2:#f4f8fd;
+  --fg:#0b1b30;--muted:#51677f;--faint:#7a8ca3;
+  --accent:#0d7fc0;--accent-2:#1ba0e6;--eco:#139a5a;--eco-2:#2bb673;
+  --good:#0f9d66;--warn:#c07d10;
+  --line:rgba(11,27,48,.12);--line-2:rgba(11,27,48,.07);--glow:rgba(13,127,192,.18);
+  --img-veil:linear-gradient(180deg,rgba(8,22,40,.1),rgba(8,22,40,.66));
+  --shadow:0 18px 44px -26px rgba(16,42,78,.45);color-scheme:light;}}
+:root[data-theme="light"]{
+  --bg:#eef4fb;--bg-2:#fff;--surface:#fff;--surface-2:#f4f8fd;
+  --fg:#0b1b30;--muted:#51677f;--faint:#7a8ca3;
+  --accent:#0d7fc0;--accent-2:#1ba0e6;--eco:#139a5a;--eco-2:#2bb673;
+  --good:#0f9d66;--warn:#c07d10;
+  --line:rgba(11,27,48,.12);--line-2:rgba(11,27,48,.07);--glow:rgba(13,127,192,.18);
+  --img-veil:linear-gradient(180deg,rgba(8,22,40,.1),rgba(8,22,40,.66));
+  --shadow:0 18px 44px -26px rgba(16,42,78,.45);color-scheme:light;}
+
+*{box-sizing:border-box}
+html{scroll-padding-top:60px}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55;overflow-x:hidden}
+h1,h2,h3,.display{font-family:"Sora",sans-serif;text-wrap:balance;line-height:1.08;letter-spacing:-.015em}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+
+.topbar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;gap:12px;padding:11px clamp(14px,4vw,40px);padding-top:calc(11px + env(safe-area-inset-top,0px));background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-2)}
+.brand{display:flex;align-items:center;gap:8px;font-family:"Sora";font-weight:800;letter-spacing:.02em;font-size:14px;line-height:1}
+.brand .mark{width:25px;height:25px;border-radius:7px;flex:0 0 auto;background:linear-gradient(145deg,var(--accent),#1573b8);display:grid;place-items:center;box-shadow:0 4px 14px -4px var(--glow)}
+.brand .mark svg{width:14px;height:14px}
+.brand small{font-weight:600;color:var(--muted);font-family:"IBM Plex Sans";letter-spacing:.14em;font-size:9px}
+.progress{flex:1;height:3px;border-radius:3px;background:var(--line);overflow:hidden;min-width:20px}
+.progress>span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:3px}
+.counter{font-family:"IBM Plex Mono";font-size:12px;color:var(--muted);white-space:nowrap}.counter b{color:var(--fg)}
+.iconbtn{width:34px;height:34px;flex:0 0 auto;border-radius:9px;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer;display:grid;place-items:center;transition:border-color .2s,transform .2s}
+.iconbtn:active{transform:scale(.92)}.iconbtn:hover{border-color:var(--accent)}.iconbtn svg{width:16px;height:16px}
+
+.sec{padding:clamp(60px,9vh,96px) clamp(16px,5vw,56px);position:relative}
+.sec:first-of-type{padding-top:84px}
+.sec .inner{max-width:1120px;margin:0 auto;width:100%}
+.sec.hero{overflow:hidden}
+
+/* reveal */
+.r{opacity:0;transform:translateY(26px);filter:blur(6px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1),filter .7s}
+.r.in{opacity:1;transform:none;filter:none}
+
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:"IBM Plex Mono";font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-2);font-weight:600}
+.eyebrow::before{content:"";width:20px;height:1px;background:var(--accent)}
+.eyebrow.eco{color:var(--eco-2)}.eyebrow.eco::before{background:var(--eco)}
+.lead{color:var(--muted);font-size:clamp(14.5px,1.7vw,18px);max-width:62ch}
+h1.title{font-size:clamp(30px,7.2vw,58px);font-weight:800;margin:.35em 0 .45em}
+h2.title{font-size:clamp(25px,5.6vw,42px);font-weight:800;margin:.3em 0 .5em}
+.accent{color:var(--accent-2)}.ecoc{color:var(--eco-2)}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;padding:7px 13px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--muted)}
+.chip b{color:var(--fg);font-weight:600}.chip .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.chip.ecochip .dot{background:var(--eco)}
+
+.grid{display:grid;gap:13px;margin-top:22px}
+.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;min-width:0;position:relative;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--accent) 50%,var(--line));box-shadow:var(--shadow)}
+.card .ic{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent-2);margin-bottom:12px}
+.card .ic svg{width:19px;height:19px}
+.card h3{font-size:16px;font-weight:700;margin:0 0 6px}.card p{margin:0;color:var(--muted);font-size:13px}
+.card .big{font-family:"Sora";font-weight:800;font-size:clamp(23px,3.3vw,32px);letter-spacing:-.02em;line-height:1}
+.card .unit{color:var(--muted);font-size:12px;margin-top:5px;font-weight:600}
+.card.feat{background:linear-gradient(160deg,var(--surface-2),var(--surface))}
+.card.eco .ic{background:color-mix(in srgb,var(--eco) 18%,transparent);color:var(--eco-2)}.card.eco .big{color:var(--eco-2)}
+.topline{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+.topline.eco{background:linear-gradient(90deg,var(--eco),var(--eco-2))}
+
+/* hero */
+.herophoto{position:relative;border-radius:18px;overflow:hidden;margin-bottom:22px;aspect-ratio:16/8;max-width:100%;border:1px solid var(--line)}
+.herophoto img{width:100%;height:100%;object-fit:cover;display:block;animation:ken 24s ease-in-out infinite alternate}
+.herophoto::after{content:"";position:absolute;inset:0;background:var(--img-veil)}
+.herophoto .cap{position:absolute;left:16px;bottom:13px;z-index:2;font-family:"IBM Plex Mono";font-size:11px;color:#eaf2fb;letter-spacing:.08em;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+@keyframes ken{from{transform:scale(1.06)}to{transform:scale(1.2) translate(-1.5%,-2%)}}
+.aura{position:absolute;inset:-18% -25% auto auto;width:min(70vw,560px);height:min(70vw,560px);z-index:0;pointer-events:none;background:radial-gradient(circle,var(--glow),transparent 66%);filter:blur(8px);animation:drift 16s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translate(0,0)}to{transform:translate(-6%,5%)}}
+.scrollhint{display:inline-flex;align-items:center;gap:9px;margin-top:26px;font-family:"IBM Plex Mono";font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.scrollhint .m{width:22px;height:34px;border:2px solid var(--faint);border-radius:12px;position:relative;flex:0 0 auto}
+.scrollhint .m::after{content:"";position:absolute;left:50%;top:6px;width:3px;height:6px;border-radius:3px;background:var(--accent-2);transform:translateX(-50%);animation:wheel 1.5s ease-in-out infinite}
+@keyframes wheel{0%{opacity:0;transform:translate(-50%,0)}30%{opacity:1}100%{opacity:0;transform:translate(-50%,10px)}}
+
+/* projects */
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;min-width:0;transition:transform .3s,box-shadow .3s,border-color .3s}
+.proj:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--eco) 45%,var(--line))}
+.proj .vis{position:relative;aspect-ratio:16/10;overflow:hidden}
+.proj .vis img,.proj .vis svg{width:100%;height:100%;object-fit:cover;display:block}
+.proj .vis img{animation:ken 28s ease-in-out infinite alternate}
+.proj .vis .tag{position:absolute;top:11px;left:11px;z-index:3;font-family:"IBM Plex Mono";font-size:10px;letter-spacing:.1em;text-transform:uppercase;background:rgba(10,21,38,.72);color:#fff;padding:5px 10px;border-radius:999px;backdrop-filter:blur(4px)}
+.proj .vis .tag.live{background:color-mix(in srgb,var(--eco) 82%,#063)}
+.proj .body{padding:15px 16px 17px}
+.proj h3{font-size:18px;margin:0 0 3px}.proj .loc{font-family:"IBM Plex Mono";font-size:11px;color:var(--accent-2);letter-spacing:.03em}
+.proj p{margin:8px 0 0;color:var(--muted);font-size:12.5px}
+
+.framed{border-radius:16px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/10;max-width:100%;position:relative}
+.framed img{width:100%;height:100%;object-fit:cover;display:block;animation:ken 26s ease-in-out infinite alternate}
+.framed .cap{position:absolute;left:14px;bottom:11px;font-family:"IBM Plex Mono";font-size:10.5px;color:#eaf2fb;letter-spacing:.06em;text-shadow:0 1px 6px rgba(0,0,0,.6);z-index:2}
+.framed::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,21,38,.5))}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px;align-items:center}
+.split.wide-img{grid-template-columns:1.1fr .9fr}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:14px}
+.gallery .framed{aspect-ratio:4/3}
+
+/* flow */
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:9px;margin-top:22px}
+.flow .step{flex:1 1 130px;min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:13px}
+.flow .step .n{font-family:"IBM Plex Mono";font-size:11px;color:var(--accent-2);font-weight:600}
+.flow .step .t{font-weight:600;font-size:13px;margin-top:4px}.flow .step .s{font-size:11px;color:var(--faint);margin-top:3px}
+.flow.eco .step .n{color:var(--eco-2)}
+.flow .arrow{align-self:center;color:var(--accent);flex:0 0 auto}.flow.eco .arrow{color:var(--eco)}
+
+/* mafi */
+.mafi{display:grid;gap:11px;margin-top:22px;grid-template-columns:repeat(5,1fr)}
+.mstep{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 14px;position:relative;overflow:hidden}
+.mstep .mn{font-family:"Sora";font-weight:800;font-size:26px;color:color-mix(in srgb,var(--accent) 55%,var(--muted));line-height:1}
+.mstep h3{font-size:14px;margin:9px 0 5px}.mstep p{margin:0;color:var(--muted);font-size:12px}
+.mstep .topline{opacity:.8}
+
+/* funnel */
+.funnel{display:flex;flex-direction:column;gap:11px;margin-top:20px}
+.fbar{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 15px;position:relative;overflow:hidden}
+.fbar .fill{position:absolute;inset:0;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,color-mix(in srgb,var(--accent) 30%,transparent),transparent);transition:transform 1.1s cubic-bezier(.22,1,.36,1) var(--dl,0s)}
+.sec .fbar.in .fill{transform:scaleX(var(--w))}
+.fbar .row{position:relative;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.fbar .lab{font-weight:600;font-size:13.5px}.fbar .val{font-family:"IBM Plex Mono";font-weight:600;font-size:15px;color:var(--accent-2)}
+.fbar .sub{position:relative;font-size:11px;color:var(--faint);margin-top:2px}
+
+/* rhythm */
+.rhythm{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:16px}
+.rhythm h3{font-size:14px;margin:0 0 12px;display:flex;align-items:center;gap:8px}.rhythm h3 svg{width:17px;height:17px;color:var(--accent-2)}
+.rlist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.rlist li{display:flex;gap:11px;align-items:flex-start;font-size:13px}
+.rlist li .num{font-family:"IBM Plex Mono";font-weight:600;font-size:12px;color:var(--accent-2);background:color-mix(in srgb,var(--accent) 14%,transparent);border-radius:7px;padding:2px 7px;flex:0 0 auto;margin-top:1px}
+.rlist li b{color:var(--fg);font-weight:600}.rlist li span{color:var(--muted)}
+
+/* growth */
+.growth{display:grid;gap:12px;margin-top:20px}
+.gmonth{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:15px 17px;position:relative;overflow:hidden}
+.gmonth .ghead{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.gmonth .ml{font-family:"IBM Plex Mono";font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.gmonth .gt{font-family:"Sora";font-weight:700;font-size:16px;margin-top:2px}
+.gmonth .gc{font-family:"Sora";font-weight:800;font-size:clamp(19px,4vw,25px);color:var(--eco-2);text-align:right;line-height:1}
+.gmonth .gbar{height:8px;border-radius:6px;background:var(--line);margin-top:12px;overflow:hidden;position:relative}
+.gmonth .gbar>span{display:block;height:100%;width:0;border-radius:6px;background:linear-gradient(90deg,var(--eco),var(--eco-2));transition:width 1.1s cubic-bezier(.22,1,.36,1) var(--dl,0s)}
+.sec .gmonth.in .gbar>span{width:var(--gw)}
+.gtotal{background:linear-gradient(160deg,color-mix(in srgb,var(--eco) 20%,var(--surface)),var(--surface));border:1px solid color-mix(in srgb,var(--eco) 40%,var(--line));border-radius:16px;padding:17px 20px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.gtotal .k{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.gtotal .amount{font-family:"Sora";font-weight:800;font-size:clamp(27px,5.6vw,38px);color:var(--eco-2);letter-spacing:-.02em}
+
+/* calc */
+.calc{margin-top:20px;display:grid;gap:15px;grid-template-columns:1fr .9fr}
+.calcbox{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}
+.field label{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;color:var(--muted);font-weight:600}
+.field label .v{font-family:"IBM Plex Mono";color:var(--fg);font-size:16px}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:7px;border-radius:7px;margin:14px 0 5px;background:linear-gradient(90deg,var(--accent) var(--p,50%),var(--line) var(--p,50%));cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--accent-2);border:4px solid var(--bg);box-shadow:0 2px 10px -1px var(--glow);cursor:pointer}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border:4px solid var(--bg);border-radius:50%;background:var(--accent-2);cursor:pointer}
+.rangeends{display:flex;justify-content:space-between;font-size:11px;color:var(--faint);font-family:"IBM Plex Mono"}
+.ratepill{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:9px 15px;border-radius:999px;background:color-mix(in srgb,var(--accent) 16%,transparent);border:1px solid color-mix(in srgb,var(--accent) 40%,var(--line));font-weight:600;font-size:13.5px}
+.ratepill b{font-family:"IBM Plex Mono";color:var(--accent-2);font-size:15px}
+.result{display:flex;flex-direction:column;justify-content:center;background:linear-gradient(160deg,var(--surface-2),var(--surface));border:1px solid var(--line);border-radius:18px;padding:22px;text-align:center}
+.result .k{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.result .amount{font-family:"Sora";font-weight:800;font-size:clamp(34px,7vw,48px);letter-spacing:-.02em;margin:6px 0;color:var(--accent-2)}
+.result .pm{font-size:12px;color:var(--faint)}
+.note{font-size:11.5px;color:var(--faint);margin-top:14px;display:flex;gap:7px;align-items:flex-start;max-width:62ch}
+.note svg{flex:0 0 auto;width:14px;height:14px;margin-top:2px;color:var(--accent)}
+
+.ticks{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px;max-width:62ch}
+.ticks li{display:flex;gap:11px;align-items:flex-start;font-size:14px}
+.ticks li svg{flex:0 0 auto;width:19px;height:19px;color:var(--eco);margin-top:2px}
+
+.ctawrap{text-align:center}
+.wabtn{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:15px 28px;border-radius:14px;background:var(--wa);color:#063d1a;font-family:"Sora";font-weight:700;font-size:16px;text-decoration:none;box-shadow:0 12px 30px -12px rgba(37,211,102,.6);transition:transform .2s,box-shadow .2s}
+.wabtn:hover{transform:translateY(-2px);box-shadow:0 16px 36px -12px rgba(37,211,102,.7)}.wabtn:active{transform:scale(.97)}
+.wabtn svg{width:22px;height:22px;flex:0 0 auto}
+.waline{font-family:"IBM Plex Mono";font-size:14px;color:var(--muted);margin-top:12px}.waline b{color:var(--fg);user-select:all}
+
+@media (max-width:820px){
+  .g3,.g4,.calc,.split,.split.wide-img,.mafi{grid-template-columns:1fr}
+  .g4,.g2,.mafi{grid-template-columns:1fr 1fr}
+  .flow .arrow{transform:rotate(90deg)}.flow .step{flex-basis:100%}
+}
+@media (max-width:460px){
+  .g2,.g4,.mafi{grid-template-columns:1fr}
+  .sec{padding-left:16px;padding-right:16px}
+  .herophoto{aspect-ratio:16/10}.gallery{grid-template-columns:1fr 1fr}
+  .chip{font-size:12px;padding:6px 11px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .r{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
+  .herophoto img,.framed img,.proj .vis img,.aura,.scrollhint .m::after{animation:none!important}
+  .fbar .fill{transform:scaleX(var(--w))!important}.gmonth .gbar>span{width:var(--gw)!important}
+}
+</style>
+
+<div class="topbar">
+  <div class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z" fill="#fff"/></svg></span>SAFEBROK<br><small>MÉXICO</small></div>
+  <div class="progress"><span id="prog"></span></div>
+  <div class="counter"><b id="cNow">1</b>/<span id="cTot">13</span></div>
+  <button class="iconbtn" id="theme" aria-label="Cambiar tema" title="Tema claro / oscuro"><svg id="themeIc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+</div>
+
+<!-- 1 HERO -->
+<section class="sec hero" data-sec>
+  <span class="aura"></span>
+  <div class="inner">
+    <div class="herophoto r"><img src="assets/sgc_lagoon.jpg" alt="Render Smart Green City" loading="eager"><span class="cap">SMART GREEN CITY · CAMPECHE</span></div>
+    <p class="eyebrow r">Oportunidad para asesores inmobiliarios</p>
+    <h1 class="title r">Vende patrimonio<br>con una <span class="accent">marca que respalda.</span></h1>
+    <p class="lead r">Súmate a la coordinación de SafeBrok México. Comisión directa, un portafolio de desarrollos reales y un sistema completo de prospección, capacitación y cierre.</p>
+    <div class="chips r">
+      <span class="chip ecochip"><span class="dot"></span><b>3 desarrollos</b> en portafolio</span>
+      <span class="chip"><span class="dot"></span><b>Comisión 3.6%</b> directa</span>
+      <span class="chip"><span class="dot"></span><b>CRM + IA</b> y capacitación</span>
+    </div>
+    <div class="scrollhint r"><span class="m"></span>Desliza para explorar</div>
+  </div>
+</section>
+
+<!-- 2 SOBRE SAFEBROK -->
+<section class="sec" data-sec>
+  <div class="inner">
+    <p class="eyebrow r">Sobre SafeBrok</p>
+    <h2 class="title r">Un aliado financiero<br>con <span class="accent">trayectoria global.</span></h2>
+    <p class="lead r">SafeBrok nació con una visión clara: Democratizar las finanzas y hacer que la planificación patrimonial y la protección familiar sean accesibles para todos. No es solo un intermediario; es un aliado estratégico con un servicio 360° basado en honestidad, transparencia y tecnología de vanguardia. Con raíces en Europa, hoy opera también en México.</p>
+    <div class="grid g4">
+      <div class="card feat r"><div class="topline"></div><div class="big"><span data-count="9" data-prefix="+">0</span></div><div class="unit">años de trayectoria (Europa)</div></div>
+      <div class="card feat r"><div class="topline"></div><div class="big"><span data-count="500" data-prefix="+">0</span></div><div class="unit">colaboradores en el mundo</div></div>
+      <div class="card feat r"><div class="topline"></div><div class="big"><span data-count="100" data-prefix="+">0</span> mil</div><div class="unit">clientes a nivel global</div></div>
+      <div class="card feat r"><div class="topline"></div><div class="big">México</div><div class="unit">operación desde 2026</div></div>
+    </div>
+    <div class="chips r">
+      <span class="chip"><span class="dot"></span>Sector: <b>Servicios financieros</b></span>
+      <span class="chip"><span class="dot"></span>Modelo <b>360°</b> de protección patrimonial</span>
+      <span class="chip"><span class="dot"></span>Infraestructura tecnológica y alianzas digitales</span>
+    </div>
+  </div>
+</section>
+
+<!-- 3 PORTAFOLIO -->
+<section class="sec" data-sec>
+  <div class="inner">
+    <p class="eyebrow eco r">Nuestro portafolio</p>
+    <h2 class="title r">Tres desarrollos<br>para <span class="ecoc">cada inversionista.</span></h2>
+    <p class="lead r">No vendes un solo producto: Ofreces opciones según el perfil, la plaza y el presupuesto de cada cliente.</p>
+    <div class="grid g3">
+      <div class="proj r">
+        <div class="vis"><span class="tag live">En comercialización</span><img src="assets/sgc_dusk.jpg" alt="Smart Green City"></div>
+        <div class="body"><h3>Smart Green City</h3><div class="loc">Hecelchakán, Campeche</div><p>236 lotes con diseño radial y fideicomiso de garantía, en el corredor del Tren Maya.</p></div>
+      </div>
+      <div class="proj r">
+        <div class="vis"><span class="tag live">En comercialización</span><img src="assets/mittah.jpg" alt="Capitals Mittah"></div>
+        <div class="body"><h3>Capitals Mittah</h3><div class="loc">Riviera Nayarit</div><p>Lotes, villas y departamentos con club de playa, cerca de Punta Mita y Puerto Vallarta.</p></div>
+      </div>
+      <div class="proj r">
+        <div class="vis"><span class="tag live">En comercialización</span><img src="assets/ecovalle_path.jpg" alt="Capitals EcoValle"></div>
+        <div class="body"><h3>Capitals EcoValle</h3><div class="loc">Estado de México · 70 min de CDMX</div><p>183 lotes campestres con casa club, Top Golf y smart homes sustentables.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 SMART GREEN CITY -->
+<section class="sec" data-sec>
+  <div class="inner">
+    <p class="eyebrow eco r">Producto estrella · Be Smart. Be Green.</p>
+    <h2 class="title r">Smart Green City<br><span class="ecoc">Fase Fundadores.</span></h2>
+    <div class="split wide-img">
+      <div class="framed r"><img src="assets/sgc_lagoon.jpg" alt="Render Smart Green City"><span class="cap">RENDER · DISEÑO CONCEPTUAL</span></div>
+      <div class="r">
+        <p class="lead" style="margin-top:0">Ciudad inteligente y sustentable en Hecelchakán, Campeche, sobre el corredor del Tren Maya. Masterplan radial de cinco distritos, lagos y zonas de bienestar, estructurada con fideicomiso de garantía.</p>
+        <div class="chips">
+          <span class="chip ecochip"><span class="dot"></span><b><span data-count="236">0</span></b> lotes · <span data-count="200">0</span> m² prom.</span>
+          <span class="chip ecochip"><span class="dot"></span><b><span data-count="5">0</span> distritos</b> · diseño radial</span>
+          <span class="chip ecochip"><span class="dot"></span><b><span data-count="8">0</span></b> lagos y espejos de agua</span>
+          <span class="chip ecochip"><span class="dot"></span>Fideicomiso <b>F/RSDA/36</b></span>
+        </div>
+      </div>
+    </div>
+    <div class="gallery r" style="grid-template-columns:repeat(2,1fr)">
+      <div class="framed"><img src="assets/sgc_master.jpg" alt="Masterplan radial Smart Green City"><span class="cap">MASTERPLAN RADIAL · 5 DISTRITOS</span></div>
+      <div class="framed"><img src="assets/trazado.jpg" alt="Trazado de lotes"><span class="cap">TRAZADO DE LOTES</span></div>
+    </div>
+    <div class="chips r">
+      <span class="chip ecochip"><span class="dot"></span>World District <b>Premium Plus</b></span>
+      <span class="chip ecochip"><span class="dot"></span>Eco Habitat <b>eco-friendly</b></span>
+      <span class="chip ecochip"><span class="dot"></span>Central District <b>corporativo</b></span>
+      <span class="chip ecochip"><span class="dot"></span>Living <b>residencial</b></span>
+      <span class="chip ecochip"><span class="dot"></span>Village <b>premium</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- 5 PLUSVALÍA SGC -->
+<section class="sec" data-sec>
+  <div class="inner">
+    <p class="eyebrow eco r">Argumento de inversión · Campeche</p>
+    <h2 class="title r">El sureste que <span class="ecoc">pocos están viendo.</span></h2>
+    <p class="lead r">Campeche entra al mapa antes del crecimiento masivo que ya encareció a Tulum, Mérida y Cancún: Precios accesibles, baja densidad y la conectividad del Tren Maya. Esa es la historia de plusvalía que tu cliente compra.</p>
+    <p class="lead r" style="margin-top:10px;font-size:13px">Proyección del valor de un lote a 5 años*</p>
+    <div class="grid g3">
+      <div class="card eco r"><div class="topline eco"></div><div class="unit" style="margin:0 0 4px">Escenario conservador · +12% anual</div><div class="big mono"><span data-count="1222500" data-money>0</span></div><div class="unit">valor estimado a 5 años</div></div>
+      <div class="card eco r"><div class="topline eco"></div><div class="unit" style="margin:0 0 4px">Escenario moderado · +20% anual</div><div class="big mono"><span data-count="1741000" data-money>0</span></div><div class="unit">valor estimado a 5 años</div></div>
+      <div class="card eco r"><div class="topline eco"></div><div class="unit" style="margin:0 0 4px">Comparativo Tren Maya (histórico)</div><div class="big mono"><span data-count="3150400" data-money>0</span></div><div class="unit">referencia de plusvalía</div></div>
+    </div>
+    <p class="note r"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>*Proyecciones del desarrollador con fines ilustrativos. No constituyen rendimiento garantizado.</p>
+  </div>
+</section>
+
+<!-- 6 MITTAH -->
+<section class="sec" data-sec>
+  <div class="inner">
+    <p class="eyebrow r">Portafolio · Pacífico</p>
+    <h2 class="title r">Capitals Mittah<br><span class="accent">Riviera Nayarit.</span></h2>
+    <div class="split wide-img">
+      <div class="framed r"><img src="assets/mittah.jpg" alt="Club de playa Mittah"><span class="cap">CLUB DE PLAYA · RIVIERA NAYARIT</span></div>
+      <div class="r">
+        <p class="lead" style="margin-top:0">Desarrollo frente al mar con club de playa, albercas, spa y restaurante. Departamentos, villas y lotes residenciales para distintos presupuestos, con certeza jurídica fiduciaria.</p>
+        <div class="chips">
+          <span class="chip"><span class="dot"></span>Lotes <b><span data-count="227">0</span>–<span data-count="794">0</span> m²</b></span>
+          <span class="chip"><span class="dot"></span>Villas <b><span data-count="264">0</span> y <span data-count="279">0</span> m²</b></span>
+          <span class="chip"><span class="dot"></span>Deptos. <b><span data-count="103">0</span> m²</b></span>
+        </div>
+      </div>
+    </div>
+    <div class="gallery r" style="grid-template-columns:repeat(2,1fr)">
+      <div class="framed"><img src="assets/mittah_villa.jpg" alt="Villa en Mittah"><span class="cap">VILLA 90 · 264 m²</span></div>
+      <div class="framed"><img src="assets/mittah.jpg" alt="Playa Mittah"><span class="cap">CLUB DE PLAYA</span></div>
+    </div>
+    <div class="grid g3 r">
+      <div class="card feat"><div class="topline"></div><div class="big"><span data-count="19">0</span> km</div><div class="unit">a Punta Mita y Sayulita</div></div>
+      <div class="card feat"><div class="topline"></div><div class="big"><span data-count="25">0</span> km</div><div class="unit">a Puerto Vallarta</div></div>
+      <div class="card feat"><div class="topline"></div><div class="big">Fiduciario</div><div class="unit">Meta Patrimonio SAFI</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 ECOVALLE -->
+<section class="sec" data-sec>
+  <div class="inner">
+    <p class="eyebrow eco r">Portafolio · Centro de México</p>
+    <h2 class="title r">Capitals EcoValle<br><span class="ecoc">escapa, vive, respira.</span></h2>
+    <div class="split wide-img">
+      <div class="framed r"><img src="assets/ecovalle_path.jpg" alt="Senderos EcoValle"><span class="cap">SENDEROS · ENTORNO NATURAL</span></div>
+      <div class="r">
+        <p class="lead" style="margin-top:0">Desarrollo campestre sustentable en el Estado de México, a 70 minutos de CDMX y 50 de Toluca. Macrolotes inteligentes y smart homes modulares con paneles solares, para habitar o rentar.</p>
+        <div class="chips">
+          <span class="chip ecochip"><span class="dot"></span><b><span data-count="183">0</span></b> lotes residenciales</span>
+          <span class="chip ecochip"><span class="dot"></span>Lotes <b><span data-count="315">0</span>–<span data-count="436">0</span> m²</b></span>
+          <span class="chip ecochip"><span class="dot"></span>Apartado desde <b><span data-count="50000" data-money>0</span></b></span>
+        </div>
+      </div>
+    </div>
+    <div class="gallery r">
+      <div class="framed"><img src="assets/ecovalle_aerial.jpg" alt="Valle EcoValle"><span class="cap">VALLE · ESTADO DE MÉXICO</span></div>
+      <div class="framed"><img src="assets/trazado.jpg" alt="Trazado de lotes EcoValle"><span class="cap">TRAZADO DE LOTES</span></div>
+      <div class="framed"><img src="assets/ecovalle_path.jpg" alt="Amenidades EcoValle"><span class="cap">SENDERISMO · AVENTURA</span></div>
+    </div>
+    <div class="grid g4 r">
+      <div class="card eco"><div class="topline eco"></div><div class="big"><span data-count="86">0</span></div><div class="unit">Etapa 1 · entrega 2028</div></div>
+      <div class="card eco"><div class="topline eco"></div><div class="big"><span data-count="97">0</span></div><div class="unit">Etapa 2 · entrega 2030</div></div>
+      <div class="card eco"><div class="topline eco"></div><div class="big"><span data-count="180">0</span> MSI</div><div class="unit">financiamiento disponible</div></div>
+      <div class="card eco"><div class="topline eco"></div><div class="big">Solar</div><div class="unit">smart homes sustentables</div></div>
+    </div>
+    <div class="chips r">
+      <span class="chip ecochip"><span class="dot"></span>Casa club: Gimnasio y salón de eventos</span>
+      <span class="chip ecochip"><span class="dot"></span>Top Golf · Pádel · Fútbol · Básquetbol</span>
+      <span class="chip ecochip"><span class="dot"></span>Senderismo · Pet-friendly</span>
+    </div>
+  </div>
+</section>
+
+<!-- 8 ESTRUCTURA FIDUCIARIA -->
+<section class="sec" data-sec>
+  <div class="inner">
+    <p class="eyebrow r">Por qué se vende con confianza</p>
+    <h2 class="title r">Estructura <span class="accent">fiduciaria</span><br>que respalda tu discurso.</h2>
+    <p class="lead r">Nuestros desarrollos operan con fideicomiso. En Smart Green City es el <b style="color:var(--fg)">Fideicomiso de Garantía F/RSDA/36</b>: El inmueble está aportado y los pagos del cliente llegan a la cuenta del propio fideicomiso. Vendes lo que el contrato respalda.</p>
+    <div class="flow r">
+      <div class="step"><div class="n">01</div><div class="t">Cliente</div><div class="s">elige su lote</div></div>
+      <div class="arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="step"><div class="n">02</div><div class="t">Contrato de promesa</div><div class="s">esquema de pagos</div></div>
+      <div class="arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="step"><div class="n">03</div><div class="t">Cuenta del fideicomiso</div><div class="s">ahí llegan los pagos</div></div>
+      <div class="arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="step"><div class="n">04</div><div class="t">Fiduciaria</div><div class="s">transmite propiedad</div></div>
+    </div>
+    <p class="note r"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>Te capacitamos en qué puedes afirmar y qué no se promete. El marco legal te protege tanto como al cliente.</p>
+  </div>
+</section>
+
+<!-- 9 MAFI -->
+<section class="sec" data-sec>
+  <div class="inner">
+    <p class="eyebrow r">Metodología propia</p>
+    <h2 class="title r">MAFI: El método<br>que te hace <span class="accent">consultor.</span></h2>
+    <p class="lead r">MAFI es el <b style="color:var(--fg)">Modelo de Asesoramiento Financiero Inteligente</b> de SafeBrok. No vendes un producto y te vas: Diagnosticas, ordenas por plazos y acompañas. Es lo que convierte una venta en una relación — y lo que te da argumentos frente a cualquier inversionista.</p>
+    <div class="mafi">
+      <div class="mstep r"><div class="topline"></div><div class="mn">01</div><h3>Diagnóstico</h3><p>Ingresos, ahorro, metas y horizonte antes de hablar de rentabilidad.</p></div>
+      <div class="mstep r"><div class="topline"></div><div class="mn">02</div><h3>Segmentación</h3><p>Objetivos por plazo: Corto (liquidez), mediano y largo.</p></div>
+      <div class="mstep r"><div class="topline"></div><div class="mn">03</div><h3>Estrategia</h3><p>La estrategia define el producto, no al revés.</p></div>
+      <div class="mstep r"><div class="topline"></div><div class="mn">04</div><h3>Decisión</h3><p>El cliente comprende lo que decide, no solo lo ejecuta.</p></div>
+      <div class="mstep r"><div class="topline"></div><div class="mn">05</div><h3>Seguimiento</h3><p>Revisiones y ajustes: Es un proceso, no una recomendación suelta.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 PROCESO DE TRABAJO -->
+<section class="sec" data-sec>
+  <div class="inner">
+    <p class="eyebrow r">Tu proceso de trabajo</p>
+    <h2 class="title r">De 100 contactos<br>a tu <span class="accent">primer cierre.</span></h2>
+    <p class="lead r">Todo arranca con tu base de <b style="color:var(--fg)">100 contactos cargados en el CRM</b>. Sobre esa base corres un ciclo de cuatro etapas, todos los días, con actividad registrada y auditable.</p>
+    <div class="flow r">
+      <div class="step"><div class="n">ETAPA 1</div><div class="t">Carga e ingreso</div><div class="s">100 contactos en CRM, perfilados</div></div>
+      <div class="arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="step"><div class="n">ETAPA 2</div><div class="t">Contacto e interés</div><div class="s">llamadas consultivas y citas</div></div>
+      <div class="arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="step"><div class="n">ETAPA 3</div><div class="t">Diagnóstico y propuesta</div><div class="s">cita de inversión a la medida</div></div>
+      <div class="arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="step"><div class="n">ETAPA 4</div><div class="t">Cierre y referidos</div><div class="s">firma con respaldo y nuevos prospectos</div></div>
+    </div>
+    <div class="rhythm r">
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Ritmo diario del asesor</h3>
+      <ul class="rlist">
+        <li><span class="num">AM</span><span><b>Prospección:</b> Actualiza tu CRM y suma contactos a tu círculo cálido.</span></li>
+        <li><span class="num">AM</span><span><b>Llamadas consultivas:</b> Contacta en bloque para filtrar capacidad y urgencia (meta ~20 efectivas/semana).</span></li>
+        <li><span class="num">PM</span><span><b>Citas:</b> Agenda y confirma tus citas de diagnóstico (meta 3–4 por semana).</span></li>
+        <li><span class="num">SEM</span><span><b>Webinars:</b> Invita al menos 5 prospectos por semana a la sesión en vivo.</span></li>
+        <li><span class="num">SEM</span><span><b>Seguimiento:</b> Registra toda tu actividad y revisa tu pipeline con la coordinación.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 11 EMBUDO + HERRAMIENTAS -->
+<section class="sec" data-sec>
+  <div class="inner">
+    <p class="eyebrow r">El embudo y tus herramientas</p>
+    <h2 class="title r">Números claros,<br><span class="accent">herramientas de verdad.</span></h2>
+    <p class="lead r">Así se ve un embudo sano en tus primeros 15 días. Transparente, para que sepas qué se espera de ti y con qué te acompañamos.</p>
+    <div class="funnel">
+      <div class="fbar r" style="--w:1;--dl:0s"><div class="fill"></div><div class="row"><span class="lab">Leads cargados en CRM</span><span class="val"><span data-count="100">0</span></span></div><div class="sub">Base obligatoria · perfilada</div></div>
+      <div class="fbar r" style="--w:.45;--dl:.15s"><div class="fill"></div><div class="row"><span class="lab">Llamadas efectivas</span><span class="val"><span data-count="20">0</span>+</span></div><div class="sub">Contactación consultiva · ratio ~20%</div></div>
+      <div class="fbar r" style="--w:.2;--dl:.3s"><div class="fill"></div><div class="row"><span class="lab">Citas de diagnóstico</span><span class="val"><span data-count="4">0</span></span></div><div class="sub">Presentaciones formales agendadas</div></div>
+      <div class="fbar r" style="--w:.1;--dl:.45s"><div class="fill"></div><div class="row"><span class="lab">Primer cierre</span><span class="val">1+</span></div><div class="sub">Primera carpeta con acompañamiento</div></div>
+    </div>
+    <div class="chips r">
+      <span class="chip"><span class="dot"></span>CRM GoHighLevel</span>
+      <span class="chip"><span class="dot"></span>Manivela</span>
+      <span class="chip"><span class="dot"></span>Google Workspace</span>
+      <span class="chip"><span class="dot"></span>IA para prospección y guiones</span>
+      <span class="chip"><span class="dot"></span>Webinars en vivo</span>
+    </div>
+  </div>
+</section>
+
+<!-- 12 COMISIÓN + CALCULADORA -->
+<section class="sec" data-sec>
+  <div class="inner">
+    <p class="eyebrow r">Cuánto ganas</p>
+    <h2 class="title r">Comisión del <span class="accent">3.6%</span><br>sobre el valor del terreno.</h2>
+    <p class="lead r">Mueve el estimador (de 50 mil en 50 mil) dentro del rango real de precios para ver tu comisión por venta.</p>
+    <div class="calc">
+      <div class="calcbox r">
+        <div class="field">
+          <label>Valor del terreno <span class="v" id="priceLbl">$850,000</span></label>
+          <input type="range" id="price" min="700000" max="1000000" step="50000" value="850000">
+          <div class="rangeends"><span>$700,000</span><span>$1,000,000</span></div>
+        </div>
+        <div class="ratepill">Comisión fija <b>3.6%</b></div>
+        <p class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>Estimador ilustrativo. Los tiempos y el esquema de pago se detallan en tu entrevista.</p>
+      </div>
+      <div class="result r">
+        <div class="k">Tu comisión por venta</div>
+        <div class="amount mono" id="perSale">$30,600</div>
+        <div class="pm">por cada terreno cerrado</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 13 PLAN DE CRECIMIENTO -->
+<section class="sec" data-sec>
+  <div class="inner">
+    <p class="eyebrow eco r">Plan de crecimiento</p>
+    <h2 class="title r">De 1 a 4 cierres<br>en <span class="ecoc">90 días.</span></h2>
+    <p class="lead r">Una rampa realista: El primer mes abres cartera, el segundo tomas ritmo y al tercero el sistema rinde. Ejemplo con un terreno de <b id="gbase" style="color:var(--fg)">$850,000</b>.</p>
+    <div class="growth">
+      <div class="gmonth r" style="--gw:25%;--dl:.1s"><div class="ghead"><div><div class="ml">Mes 1 · Arranque</div><div class="gt">1 terreno</div></div><div class="gc mono" id="gm1">$30,600</div></div><div class="gbar"><span></span></div></div>
+      <div class="gmonth r" style="--gw:50%;--dl:.25s"><div class="ghead"><div><div class="ml">Mes 2 · Ritmo</div><div class="gt">2 terrenos</div></div><div class="gc mono" id="gm2">$61,200</div></div><div class="gbar"><span></span></div></div>
+      <div class="gmonth r" style="--gw:100%;--dl:.4s"><div class="ghead"><div><div class="ml">Mes 3 · Rendimiento</div><div class="gt">4 terrenos</div></div><div class="gc mono" id="gm3">$122,400</div></div><div class="gbar"><span></span></div></div>
+    </div>
+    <div class="gtotal r"><div class="k">Comisiones acumuladas · 90 días</div><div class="amount mono" id="gtotal">$214,200</div></div>
+  </div>
+</section>
+
+<!-- 14 CTA -->
+<section class="sec hero" data-sec>
+  <span class="aura"></span>
+  <div class="inner ctawrap">
+    <p class="eyebrow eco r" style="justify-content:center">Siguiente paso</p>
+    <h2 class="title r" style="font-size:clamp(27px,6vw,46px)">¿Listo para construir tu<br>cartera con <span class="ecoc">respaldo?</span></h2>
+    <p class="lead r" style="margin:0 auto">Buscamos perfiles con experiencia comercial en bienes raíces, servicios financieros, seguros o venta de intangibles, con ganas de construir patrimonio propio y ejecutar con método.</p>
+    <ul class="ticks r" style="margin-left:auto;margin-right:auto;text-align:left">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Comisión directa del 3.6% — tu venta es tuya.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Tres desarrollos reales en Campeche, Nayarit y Estado de México.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Producto con estructura fiduciaria y método MAFI.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>CRM, IA, capacitación y webinars desde el día uno.</li>
+    </ul>
+    <a class="wabtn r" href="https://wa.me/527295676764?text=Hola%20Arturo%2C%20me%20interesa%20unirme%20como%20asesor%20a%20SafeBrok%20M%C3%A9xico." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.8.7.8-2.8-.2-.3A8 8 0 1112 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.1-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-.9-1.1-1.1-1.5-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4.1-.1 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.5 1.6.7 2.2.7 2.9.6.5 0 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.5-.3z"/></svg>
+      Escríbeme por WhatsApp
+    </a>
+    <p class="waline r">Arturo — Coordinación de Asesores · <b>+52 729 567 6764</b></p>
+  </div>
+</section>
+
+<script>
+(function(){
+  "use strict";
+  var RATE=0.036;
+  var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+  var secs=[].slice.call(document.querySelectorAll("[data-sec]"));
+  var prog=document.getElementById("prog"),cNow=document.getElementById("cNow"),cTot=document.getElementById("cTot");
+  cTot.textContent=secs.length;
+
+  function fmt(n){return "$"+Math.round(n).toLocaleString("es-MX");}
+
+  // ---- number animation ----
+  function animNum(el){
+    if(el.dataset.done)return; el.dataset.done="1";
+    var target=+el.getAttribute("data-count");
+    var money=el.hasAttribute("data-money");
+    var pre=el.getAttribute("data-prefix")||"";
+    var suf=el.getAttribute("data-suffix")||"";
+    function render(v){var s=money?Math.round(v).toLocaleString("es-MX"):Math.round(v).toLocaleString("es-MX");el.textContent=pre+(money?"$":"")+s+suf;}
+    if(reduce){render(target);return;}
+    var start=null,dur=1100;
+    function tick(ts){if(!start)start=ts;var p=Math.min((ts-start)/dur,1);var e=1-Math.pow(1-p,3);render(target*e);if(p<1)requestAnimationFrame(tick);}
+    requestAnimationFrame(tick);
+  }
+
+  // ---- reveal: stagger per section ----
+  secs.forEach(function(sec){
+    var items=[].slice.call(sec.querySelectorAll(".r"));
+    items.forEach(function(el,i){el.style.transitionDelay=(Math.min(i,8)*0.07)+"s";});
+  });
+
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting)return;
+      var el=en.target;
+      el.classList.add("in");
+      el.querySelectorAll&&el.querySelectorAll("[data-count]").forEach(animNum);
+      if(el.hasAttribute&&el.hasAttribute("data-count"))animNum(el);
+      io.unobserve(el);
+    });
+  },{threshold:0.18,rootMargin:"0px 0px -8% 0px"});
+  document.querySelectorAll(".r,[data-count],.fbar,.gmonth").forEach(function(el){io.observe(el);});
+
+  // ---- progress + section counter ----
+  function onScroll(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    var p=max>0?(h.scrollTop||window.pageYOffset)/max:0;
+    prog.style.width=(Math.max(0,Math.min(1,p))*100)+"%";
+  }
+  var secIo=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){var i=secs.indexOf(en.target);if(i>=0)cNow.textContent=i+1;}});
+  },{threshold:0.5});
+  secs.forEach(function(s){secIo.observe(s);});
+  window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+
+  // ---- theme ----
+  var root=document.documentElement,themeBtn=document.getElementById("theme"),themeIc=document.getElementById("themeIc");
+  var moon='<path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/>';
+  var sun='<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>';
+  function sysDark(){return window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches;}
+  function applyIcon(){var dark=root.getAttribute("data-theme")==="dark"||(!root.getAttribute("data-theme")&&sysDark());themeIc.innerHTML=dark?sun:moon;}
+  var saved;try{saved=localStorage.getItem("sb-theme");}catch(e){}
+  if(saved){root.setAttribute("data-theme",saved);}applyIcon();
+  themeBtn.addEventListener("click",function(){var cur=root.getAttribute("data-theme");var nowDark=cur==="dark"||(!cur&&sysDark());var nxt=nowDark?"light":"dark";root.setAttribute("data-theme",nxt);try{localStorage.setItem("sb-theme",nxt);}catch(e){}applyIcon();});
+
+  // ---- calculator + growth ----
+  var price=document.getElementById("price"),priceLbl=document.getElementById("priceLbl"),perSale=document.getElementById("perSale");
+  var gbase=document.getElementById("gbase"),gm1=document.getElementById("gm1"),gm2=document.getElementById("gm2"),gm3=document.getElementById("gm3"),gtotal=document.getElementById("gtotal");
+  function recompute(){var v=+price.value,c=v*RATE;priceLbl.textContent=fmt(v);var pct=((v-price.min)/(price.max-price.min))*100;price.style.setProperty("--p",pct+"%");perSale.textContent=fmt(c);gbase.textContent=fmt(v);gm1.textContent=fmt(c);gm2.textContent=fmt(c*2);gm3.textContent=fmt(c*4);gtotal.textContent=fmt(c*7);}
+  price.addEventListener("input",recompute);recompute();
+})();
+</script>
+</body></html>
