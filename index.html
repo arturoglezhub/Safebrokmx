@@ -89,7 +89,7 @@ h2.title{font-size:clamp(25px,5.6vw,42px);font-weight:800;margin:.3em 0 .5em}
 /* hero */
 .herophoto{position:relative;border-radius:18px;overflow:hidden;margin-bottom:22px;aspect-ratio:16/8;max-width:100%;border:1px solid var(--line)}
 .herophoto img{width:100%;height:100%;object-fit:cover;display:block;animation:ken 24s ease-in-out infinite alternate}
-.herophoto::after{content:"";position:absolute;inset:0;background:var(--img-veil)}
+.herophoto::after{content:"";position:absolute;left:0;right:0;bottom:0;height:38%;background:linear-gradient(transparent,rgba(10,21,38,.42))}
 .herophoto .cap{position:absolute;left:16px;bottom:13px;z-index:2;font-family:"IBM Plex Mono";font-size:11px;color:#eaf2fb;letter-spacing:.08em;text-shadow:0 1px 6px rgba(0,0,0,.5)}
 @keyframes ken{from{transform:scale(1.06)}to{transform:scale(1.2) translate(-1.5%,-2%)}}
 .aura{position:absolute;inset:-18% -25% auto auto;width:min(70vw,560px);height:min(70vw,560px);z-index:0;pointer-events:none;background:radial-gradient(circle,var(--glow),transparent 66%);filter:blur(8px);animation:drift 16s ease-in-out infinite alternate}
@@ -110,15 +110,38 @@ h2.title{font-size:clamp(25px,5.6vw,42px);font-weight:800;margin:.3em 0 .5em}
 .proj .body{padding:15px 16px 17px}
 .proj h3{font-size:18px;margin:0 0 3px}.proj .loc{font-family:"IBM Plex Mono";font-size:11px;color:var(--accent-2);letter-spacing:.03em}
 .proj p{margin:8px 0 0;color:var(--muted);font-size:12.5px}
+.prod{margin-top:9px;display:inline-flex;align-items:center;gap:7px;font-family:"IBM Plex Mono";font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--eco-2);font-weight:600;background:color-mix(in srgb,var(--eco) 14%,transparent);border:1px solid color-mix(in srgb,var(--eco) 32%,var(--line));padding:5px 10px;border-radius:999px}
+.prodtag{display:inline-flex;align-items:center;gap:8px;margin:0 0 10px;padding:9px 15px;border-radius:999px;background:color-mix(in srgb,var(--eco) 15%,transparent);border:1px solid color-mix(in srgb,var(--eco) 38%,var(--line));font-size:13px;font-weight:600;color:var(--fg)}
+.prodtag b{color:var(--eco-2)}
+.bio{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:22px}
+.track{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:20px}
+.track .lbl{font-family:"IBM Plex Mono";font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+@media (max-width:820px){.bio{grid-template-columns:1fr 1fr}}
+@media (max-width:460px){.bio{grid-template-columns:1fr}}
 
-.framed{border-radius:16px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/10;max-width:100%;position:relative}
+.framed{border-radius:16px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/9;max-width:100%;position:relative}
 .framed img{width:100%;height:100%;object-fit:cover;display:block;animation:ken 26s ease-in-out infinite alternate}
-.framed .cap{position:absolute;left:14px;bottom:11px;font-family:"IBM Plex Mono";font-size:10.5px;color:#eaf2fb;letter-spacing:.06em;text-shadow:0 1px 6px rgba(0,0,0,.6);z-index:2}
-.framed::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,21,38,.5))}
+.framed .cap{position:absolute;left:14px;bottom:11px;font-family:"IBM Plex Mono";font-size:10.5px;color:#fff;letter-spacing:.06em;text-shadow:0 1px 8px rgba(0,0,0,.8);z-index:2;font-weight:600}
+.framed::after{content:"";position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(transparent,rgba(10,21,38,.5))}
+.framed.contain img,.feature.contain img{object-fit:contain;background:var(--surface-2);animation:none}
+.framed.clean::after,.feature.clean::after{content:none}
+.feature{border-radius:20px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/8;max-width:100%;position:relative;margin-top:18px;box-shadow:var(--shadow)}
+.feature img{width:100%;height:100%;object-fit:cover;display:block;animation:ken 28s ease-in-out infinite alternate}
+.feature .cap{position:absolute;left:18px;bottom:14px;font-family:"IBM Plex Mono";font-size:11px;color:#fff;letter-spacing:.08em;text-shadow:0 1px 10px rgba(0,0,0,.85);z-index:2;font-weight:600}
+.feature::after{content:"";position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(transparent,rgba(10,21,38,.45))}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px;align-items:center}
-.split.wide-img{grid-template-columns:1.1fr .9fr}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:14px}
-.gallery .framed{aspect-ratio:4/3}
+.split.wide-img{grid-template-columns:1.15fr .85fr}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
+.gallery .framed{aspect-ratio:3/2}
+.vbtns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 18px;border-radius:12px;border:1px solid color-mix(in srgb,var(--accent) 45%,var(--line));background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--fg);font-family:"IBM Plex Sans";font-weight:600;font-size:13.5px;text-decoration:none;transition:.2s}
+.vbtn:hover{transform:translateY(-2px);border-color:var(--accent);background:color-mix(in srgb,var(--accent) 20%,transparent)}
+.vbtn svg{width:16px;height:16px;color:var(--accent-2);flex:0 0 auto}
+.aibox{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);margin-top:18px;background:radial-gradient(130% 120% at 72% 0,color-mix(in srgb,var(--accent) 22%,var(--bg-2)),var(--bg));aspect-ratio:16/7}
+.aibox svg{width:100%;height:100%;display:block}
+.aibox .node{animation:pulse 2.8s ease-in-out infinite}
+.aibox .aitxt{font-family:"IBM Plex Mono";font-size:9px;letter-spacing:.18em;fill:var(--muted);text-transform:uppercase}
+@keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}
 
 /* flow */
 .flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:9px;margin-top:22px}
@@ -202,7 +225,7 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:4px solid var(
 @media (max-width:460px){
   .g2,.g4,.mafi{grid-template-columns:1fr}
   .sec{padding-left:16px;padding-right:16px}
-  .herophoto{aspect-ratio:16/10}.gallery{grid-template-columns:1fr 1fr}
+  .herophoto{aspect-ratio:16/10}.gallery{grid-template-columns:1fr}.feature{aspect-ratio:16/10}
   .chip{font-size:12px;padding:6px 11px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -210,6 +233,7 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:4px solid var(
   .r{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
   .herophoto img,.framed img,.proj .vis img,.aura,.scrollhint .m::after{animation:none!important}
   .fbar .fill{transform:scaleX(var(--w))!important}.gmonth .gbar>span{width:var(--gw)!important}
+  .aibox .node{animation:none!important}
 }
 </style>
 
@@ -266,15 +290,15 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:4px solid var(
     <div class="grid g3">
       <div class="proj r">
         <div class="vis"><span class="tag live">En comercialización</span><img src="assets/sgc_dusk.jpg" alt="Smart Green City"></div>
-        <div class="body"><h3>Smart Green City</h3><div class="loc">Hecelchakán, Campeche</div><p>236 lotes con diseño radial y fideicomiso de garantía, en el corredor del Tren Maya.</p></div>
+        <div class="body"><h3>Smart Green City</h3><div class="loc">Hecelchakán, Campeche</div><p>236 lotes con diseño radial y fideicomiso de garantía, en el corredor del Tren Maya.</p><div class="prod">Producto: Lotes residenciales</div></div>
       </div>
       <div class="proj r">
-        <div class="vis"><span class="tag live">En comercialización</span><img src="assets/mittah.jpg" alt="Capitals Mittah"></div>
-        <div class="body"><h3>Capitals Mittah</h3><div class="loc">Riviera Nayarit</div><p>Lotes, villas y departamentos con club de playa, cerca de Punta Mita y Puerto Vallarta.</p></div>
+        <div class="vis"><span class="tag live">En comercialización</span><img src="assets/mit_aerial.jpg" alt="Capitals Mittah"></div>
+        <div class="body"><h3>Capitals Mittah</h3><div class="loc">Riviera Nayarit</div><p>Desarrollo frente al mar con club de playa, cerca de Punta Mita y Puerto Vallarta.</p><div class="prod">Producto: Lotes · Villas · Departamentos</div></div>
       </div>
       <div class="proj r">
-        <div class="vis"><span class="tag live">En comercialización</span><img src="assets/ecovalle_path.jpg" alt="Capitals EcoValle"></div>
-        <div class="body"><h3>Capitals EcoValle</h3><div class="loc">Estado de México · 70 min de CDMX</div><p>183 lotes campestres con casa club, Top Golf y smart homes sustentables.</p></div>
+        <div class="vis"><span class="tag live">En comercialización</span><img src="assets/ev_cabin.jpg" alt="Capitals EcoValle"></div>
+        <div class="body"><h3>Capitals EcoValle</h3><div class="loc">Estado de México · 70 min de CDMX</div><p>Desarrollo campestre con casa club, Top Golf y entorno natural.</p><div class="prod">Producto: Lotes · Smart Homes</div></div>
       </div>
     </div>
   </div>
@@ -285,29 +309,22 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:4px solid var(
   <div class="inner">
     <p class="eyebrow eco r">Producto estrella · Be Smart. Be Green.</p>
     <h2 class="title r">Smart Green City<br><span class="ecoc">Fase Fundadores.</span></h2>
-    <div class="split wide-img">
-      <div class="framed r"><img src="assets/sgc_lagoon.jpg" alt="Render Smart Green City"><span class="cap">RENDER · DISEÑO CONCEPTUAL</span></div>
-      <div class="r">
-        <p class="lead" style="margin-top:0">Ciudad inteligente y sustentable en Hecelchakán, Campeche, sobre el corredor del Tren Maya. Masterplan radial de cinco distritos, lagos y zonas de bienestar, estructurada con fideicomiso de garantía.</p>
-        <div class="chips">
-          <span class="chip ecochip"><span class="dot"></span><b><span data-count="236">0</span></b> lotes · <span data-count="200">0</span> m² prom.</span>
-          <span class="chip ecochip"><span class="dot"></span><b><span data-count="5">0</span> distritos</b> · diseño radial</span>
-          <span class="chip ecochip"><span class="dot"></span><b><span data-count="8">0</span></b> lagos y espejos de agua</span>
-          <span class="chip ecochip"><span class="dot"></span>Fideicomiso <b>F/RSDA/36</b></span>
-        </div>
-      </div>
+    <div class="prodtag r">Producto: <b>Lotes residenciales (236)</b></div>
+    <p class="lead r">Ciudad inteligente y sustentable en Hecelchakán, Campeche, sobre el corredor del Tren Maya. Masterplan radial de cinco distritos, lagos y zonas de bienestar, estructurada con fideicomiso de garantía.</p>
+    <div class="feature r"><img src="assets/sgc_lagoon.jpg" alt="Render Smart Green City"><span class="cap">RENDER · DISEÑO CONCEPTUAL</span></div>
+    <div class="grid g4 r">
+      <div class="card eco"><div class="topline eco"></div><div class="big"><span data-count="236">0</span></div><div class="unit">lotes</div></div>
+      <div class="card eco"><div class="topline eco"></div><div class="big"><span data-count="200">0</span></div><div class="unit">m² promedio</div></div>
+      <div class="card eco"><div class="topline eco"></div><div class="big"><span data-count="5">0</span></div><div class="unit">distritos · radial</div></div>
+      <div class="card eco"><div class="topline eco"></div><div class="big"><span data-count="8">0</span></div><div class="unit">lagos y espejos de agua</div></div>
     </div>
-    <div class="gallery r" style="grid-template-columns:repeat(2,1fr)">
-      <div class="framed"><img src="assets/sgc_master.jpg" alt="Masterplan radial Smart Green City"><span class="cap">MASTERPLAN RADIAL · 5 DISTRITOS</span></div>
-      <div class="framed"><img src="assets/trazado.jpg" alt="Trazado de lotes"><span class="cap">TRAZADO DE LOTES</span></div>
+    <div class="gallery r">
+      <div class="framed contain clean"><img src="assets/sgc_lotes.jpg" alt="Trazado de lotes Smart Green City"></div>
+      <div class="framed contain clean"><img src="assets/sgc_districts.jpg" alt="Masterplan 5 distritos"></div>
+      <div class="framed"><img src="assets/sgc_legado.jpg" alt="Diseño de clase mundial"><span class="cap">DISEÑO DE CLASE MUNDIAL</span></div>
+      <div class="framed"><img src="assets/sgc_dusk.jpg" alt="Render atardecer"><span class="cap">BE SMART · BE GREEN</span></div>
     </div>
-    <div class="chips r">
-      <span class="chip ecochip"><span class="dot"></span>World District <b>Premium Plus</b></span>
-      <span class="chip ecochip"><span class="dot"></span>Eco Habitat <b>eco-friendly</b></span>
-      <span class="chip ecochip"><span class="dot"></span>Central District <b>corporativo</b></span>
-      <span class="chip ecochip"><span class="dot"></span>Living <b>residencial</b></span>
-      <span class="chip ecochip"><span class="dot"></span>Village <b>premium</b></span>
-    </div>
+    <div class="chips r"><span class="chip ecochip"><span class="dot"></span>Fideicomiso de Garantía <b>F/RSDA/36</b></span></div>
   </div>
 </section>
 
@@ -317,12 +334,14 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:4px solid var(
     <p class="eyebrow eco r">Argumento de inversión · Campeche</p>
     <h2 class="title r">El sureste que <span class="ecoc">pocos están viendo.</span></h2>
     <p class="lead r">Campeche entra al mapa antes del crecimiento masivo que ya encareció a Tulum, Mérida y Cancún: Precios accesibles, baja densidad y la conectividad del Tren Maya. Esa es la historia de plusvalía que tu cliente compra.</p>
-    <p class="lead r" style="margin-top:10px;font-size:13px">Proyección del valor de un lote a 5 años*</p>
+    <div class="feature contain clean r"><img src="assets/sgc_hecelchakan.jpg" alt="¿Por qué Hecelchakán? Campeche en cifras"></div>
+    <p class="lead r" style="margin-top:16px;font-size:13px">Proyección del valor de un lote a 5 años*</p>
     <div class="grid g3">
       <div class="card eco r"><div class="topline eco"></div><div class="unit" style="margin:0 0 4px">Escenario conservador · +12% anual</div><div class="big mono"><span data-count="1222500" data-money>0</span></div><div class="unit">valor estimado a 5 años</div></div>
       <div class="card eco r"><div class="topline eco"></div><div class="unit" style="margin:0 0 4px">Escenario moderado · +20% anual</div><div class="big mono"><span data-count="1741000" data-money>0</span></div><div class="unit">valor estimado a 5 años</div></div>
       <div class="card eco r"><div class="topline eco"></div><div class="unit" style="margin:0 0 4px">Comparativo Tren Maya (histórico)</div><div class="big mono"><span data-count="3150400" data-money>0</span></div><div class="unit">referencia de plusvalía</div></div>
     </div>
+    <div class="feature contain clean r" style="aspect-ratio:16/10"><img src="assets/sgc_ubicacion.jpg" alt="Ubicación y conectividad Smart Green City"></div>
     <p class="note r"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>*Proyecciones del desarrollador con fines ilustrativos. No constituyen rendimiento garantizado.</p>
   </div>
 </section>
@@ -332,20 +351,23 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:4px solid var(
   <div class="inner">
     <p class="eyebrow r">Portafolio · Pacífico</p>
     <h2 class="title r">Capitals Mittah<br><span class="accent">Riviera Nayarit.</span></h2>
-    <div class="split wide-img">
-      <div class="framed r"><img src="assets/mittah.jpg" alt="Club de playa Mittah"><span class="cap">CLUB DE PLAYA · RIVIERA NAYARIT</span></div>
-      <div class="r">
-        <p class="lead" style="margin-top:0">Desarrollo frente al mar con club de playa, albercas, spa y restaurante. Departamentos, villas y lotes residenciales para distintos presupuestos, con certeza jurídica fiduciaria.</p>
-        <div class="chips">
-          <span class="chip"><span class="dot"></span>Lotes <b><span data-count="227">0</span>–<span data-count="794">0</span> m²</b></span>
-          <span class="chip"><span class="dot"></span>Villas <b><span data-count="264">0</span> y <span data-count="279">0</span> m²</b></span>
-          <span class="chip"><span class="dot"></span>Deptos. <b><span data-count="103">0</span> m²</b></span>
-        </div>
-      </div>
+    <div class="prodtag r">Producto: <b>Lotes · Villas · Departamentos</b></div>
+    <p class="lead r">Desarrollo frente al mar con club de playa, albercas, spa y restaurante. Lotes residenciales (227–794 m²), villas y departamentos para distintos presupuestos, con certeza jurídica fiduciaria.</p>
+    <div class="feature r"><img src="assets/mit_aerial.jpg" alt="Club de playa Mittah"><span class="cap">CLUB DE PLAYA · RIVIERA NAYARIT</span></div>
+    <div class="gallery r">
+      <div class="framed"><img src="assets/mit_pool.jpg" alt="Alberca Mittah"><span class="cap">ALBERCAS</span></div>
+      <div class="framed"><img src="assets/mit_poolbridge.jpg" alt="Vista al mar Mittah"><span class="cap">FRENTE AL MAR</span></div>
+      <div class="framed"><img src="assets/mit_tennis.jpg" alt="Canchas deportivas Mittah"><span class="cap">CANCHAS DEPORTIVAS</span></div>
+      <div class="framed"><img src="assets/mit_kitchen.jpg" alt="Interior de villa Mittah"><span class="cap">INTERIORES</span></div>
     </div>
-    <div class="gallery r" style="grid-template-columns:repeat(2,1fr)">
-      <div class="framed"><img src="assets/mittah_villa.jpg" alt="Villa en Mittah"><span class="cap">VILLA 90 · 264 m²</span></div>
-      <div class="framed"><img src="assets/mittah.jpg" alt="Playa Mittah"><span class="cap">CLUB DE PLAYA</span></div>
+    <p class="lead r" style="margin-top:20px;font-size:13px">Villas disponibles</p>
+    <div class="gallery r">
+      <div class="framed contain clean"><img src="assets/mit_villa29.jpg" alt="Villa 29 · 279 m² · $15.9 mdp"></div>
+      <div class="framed contain clean"><img src="assets/mit_villa90.jpg" alt="Villa 90 · 264 m² · $14 mdp"></div>
+    </div>
+    <div class="vbtns r">
+      <a class="vbtn" href="https://my.matterport.com/show?play=1&lang=en-US&m=VkC4jYaiFYL" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M10 9l5 3-5 3V9z" fill="currentColor" stroke="none"/></svg>Recorrido virtual · Villa 1</a>
+      <a class="vbtn" href="https://my.matterport.com/show?play=1&lang=en-US&m=ng2iwTEAcPg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M10 9l5 3-5 3V9z" fill="currentColor" stroke="none"/></svg>Recorrido virtual · Villa 2</a>
     </div>
     <div class="grid g3 r">
       <div class="card feat"><div class="topline"></div><div class="big"><span data-count="19">0</span> km</div><div class="unit">a Punta Mita y Sayulita</div></div>
@@ -360,32 +382,27 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:4px solid var(
   <div class="inner">
     <p class="eyebrow eco r">Portafolio · Centro de México</p>
     <h2 class="title r">Capitals EcoValle<br><span class="ecoc">escapa, vive, respira.</span></h2>
-    <div class="split wide-img">
-      <div class="framed r"><img src="assets/ecovalle_path.jpg" alt="Senderos EcoValle"><span class="cap">SENDEROS · ENTORNO NATURAL</span></div>
-      <div class="r">
-        <p class="lead" style="margin-top:0">Desarrollo campestre sustentable en el Estado de México, a 70 minutos de CDMX y 50 de Toluca. Macrolotes inteligentes y smart homes modulares con paneles solares, para habitar o rentar.</p>
-        <div class="chips">
-          <span class="chip ecochip"><span class="dot"></span><b><span data-count="183">0</span></b> lotes residenciales</span>
-          <span class="chip ecochip"><span class="dot"></span>Lotes <b><span data-count="315">0</span>–<span data-count="436">0</span> m²</b></span>
-          <span class="chip ecochip"><span class="dot"></span>Apartado desde <b><span data-count="50000" data-money>0</span></b></span>
-        </div>
-      </div>
-    </div>
+    <div class="prodtag r">Producto: <b>Lotes residenciales · Smart Homes</b></div>
+    <p class="lead r">Desarrollo campestre sustentable en el Estado de México, a 70 minutos de CDMX y 50 de Toluca. Macrolotes inteligentes y smart homes modulares con paneles solares, para habitar o rentar.</p>
+    <div class="feature r"><img src="assets/ev_cabin.jpg" alt="Eco home EcoValle"><span class="cap">ECO HOME · MODELO 60 m²</span></div>
     <div class="gallery r">
-      <div class="framed"><img src="assets/ecovalle_aerial.jpg" alt="Valle EcoValle"><span class="cap">VALLE · ESTADO DE MÉXICO</span></div>
-      <div class="framed"><img src="assets/trazado.jpg" alt="Trazado de lotes EcoValle"><span class="cap">TRAZADO DE LOTES</span></div>
-      <div class="framed"><img src="assets/ecovalle_path.jpg" alt="Amenidades EcoValle"><span class="cap">SENDERISMO · AVENTURA</span></div>
+      <div class="framed"><img src="assets/ev_aerial3d.jpg" alt="Vista aérea EcoValle"><span class="cap">MASTERPLAN · LOTE TIPO, ECO HOMES, CICLOVÍA</span></div>
+      <div class="framed contain clean"><img src="assets/ev_master.jpg" alt="Trazado de lotes EcoValle"></div>
+      <div class="framed"><img src="assets/ev_smart.jpg" alt="Smart home modular EcoValle"><span class="cap">SMART HOME MODULAR · SOLAR</span></div>
+      <div class="framed"><img src="assets/ev_club.jpg" alt="Casa club EcoValle"><span class="cap">CASA CLUB · GYM Y ALBERCA</span></div>
+      <div class="framed"><img src="assets/ev_casa1.jpg" alt="Interior casa habitación EcoValle"><span class="cap">CASA HABITACIÓN · 215 m²</span></div>
+      <div class="framed"><img src="assets/ev_casa2.jpg" alt="Interior casa habitación EcoValle"><span class="cap">CASA HABITACIÓN · 270 m²</span></div>
     </div>
     <div class="grid g4 r">
-      <div class="card eco"><div class="topline eco"></div><div class="big"><span data-count="86">0</span></div><div class="unit">Etapa 1 · entrega 2028</div></div>
-      <div class="card eco"><div class="topline eco"></div><div class="big"><span data-count="97">0</span></div><div class="unit">Etapa 2 · entrega 2030</div></div>
+      <div class="card eco"><div class="topline eco"></div><div class="big"><span data-count="183">0</span></div><div class="unit">lotes · Etapas 1 y 2</div></div>
+      <div class="card eco"><div class="topline eco"></div><div class="big"><span data-count="315">0</span>–<span data-count="436">0</span></div><div class="unit">m² por lote</div></div>
+      <div class="card eco"><div class="topline eco"></div><div class="big"><span data-count="50000" data-money>0</span></div><div class="unit">apartado desde</div></div>
       <div class="card eco"><div class="topline eco"></div><div class="big"><span data-count="180">0</span> MSI</div><div class="unit">financiamiento disponible</div></div>
-      <div class="card eco"><div class="topline eco"></div><div class="big">Solar</div><div class="unit">smart homes sustentables</div></div>
     </div>
     <div class="chips r">
       <span class="chip ecochip"><span class="dot"></span>Casa club: Gimnasio y salón de eventos</span>
       <span class="chip ecochip"><span class="dot"></span>Top Golf · Pádel · Fútbol · Básquetbol</span>
-      <span class="chip ecochip"><span class="dot"></span>Senderismo · Pet-friendly</span>
+      <span class="chip ecochip"><span class="dot"></span>Senderismo · Pet-friendly · Smart homes solares</span>
     </div>
   </div>
 </section>
@@ -415,6 +432,27 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:4px solid var(
     <p class="eyebrow r">Metodología propia</p>
     <h2 class="title r">MAFI: El método<br>que te hace <span class="accent">consultor.</span></h2>
     <p class="lead r">MAFI es el <b style="color:var(--fg)">Modelo de Asesoramiento Financiero Inteligente</b> de SafeBrok. No vendes un producto y te vas: Diagnosticas, ordenas por plazos y acompañas. Es lo que convierte una venta en una relación — y lo que te da argumentos frente a cualquier inversionista.</p>
+    <div class="aibox r">
+      <svg viewBox="0 0 400 175" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Inteligencia artificial aplicada">
+        <g stroke="var(--accent)" stroke-width="1" opacity="0.5" fill="none">
+          <path d="M200 88 L48 34"/><path d="M200 88 L30 92"/><path d="M200 88 L60 150"/><path d="M200 88 L135 158"/>
+          <path d="M200 88 L112 20"/><path d="M200 88 L360 32"/><path d="M200 88 L372 96"/><path d="M200 88 L332 152"/>
+          <path d="M200 88 L288 24"/><path d="M200 88 L252 160"/><path d="M200 88 L210 18"/>
+        </g>
+        <g fill="var(--accent-2)">
+          <circle class="node" cx="48" cy="34" r="4"/><circle class="node" cx="30" cy="92" r="3.5" style="animation-delay:.3s"/>
+          <circle class="node" cx="60" cy="150" r="4" style="animation-delay:.6s"/><circle class="node" cx="135" cy="158" r="3" style="animation-delay:.9s"/>
+          <circle class="node" cx="112" cy="20" r="3.5" style="animation-delay:.2s"/><circle class="node" cx="360" cy="32" r="4" style="animation-delay:.5s"/>
+          <circle class="node" cx="372" cy="96" r="3.5" style="animation-delay:.8s"/><circle class="node" cx="332" cy="152" r="4" style="animation-delay:1.1s"/>
+          <circle class="node" cx="288" cy="24" r="3" style="animation-delay:.4s"/><circle class="node" cx="252" cy="160" r="3.5" style="animation-delay:.7s"/>
+          <circle class="node" cx="210" cy="18" r="3" style="animation-delay:1s"/>
+        </g>
+        <rect x="172" y="60" width="56" height="56" rx="14" fill="color-mix(in srgb, var(--accent) 30%, transparent)" stroke="var(--accent-2)" stroke-width="1.5"/>
+        <g stroke="var(--accent-2)" stroke-width="1.6" fill="none"><circle cx="200" cy="88" r="11"/><path d="M200 77v-6M200 99v6M189 88h-6M211 88h6"/></g>
+        <circle cx="200" cy="88" r="3.5" fill="var(--accent-2)"/>
+        <text class="aitxt" x="18" y="166">Inteligencia artificial · prospección · scoring · señales de mercado</text>
+      </svg>
+    </div>
     <div class="mafi">
       <div class="mstep r"><div class="topline"></div><div class="mn">01</div><h3>Diagnóstico</h3><p>Ingresos, ahorro, metas y horizonte antes de hablar de rentabilidad.</p></div>
       <div class="mstep r"><div class="topline"></div><div class="mn">02</div><h3>Segmentación</h3><p>Objetivos por plazo: Corto (liquidez), mediano y largo.</p></div>
@@ -515,7 +553,30 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:4px solid var(
   </div>
 </section>
 
-<!-- 14 CTA -->
+<!-- 14 SOBRE ARTURO -->
+<section class="sec" data-sec>
+  <div class="inner">
+    <p class="eyebrow r">Tu coordinador</p>
+    <h2 class="title r">Arturo González<br><span class="accent">quien te va a respaldar.</span></h2>
+    <p class="lead r">Más de 10 años construyendo la infraestructura que hace que el marketing y las ventas sean medibles y escalables. Mi trabajo vive en la intersección de tres cosas: Estrategia de marketing, operación de datos y ejecución con inteligencia artificial. No vengo a supervisarte desde lejos; vengo a darte sistema, herramientas y acompañamiento para que produzcas.</p>
+    <div class="bio">
+      <div class="card r"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 14l4-4 3 3 5-6"/></svg></div><h3>Marketing & datos</h3><p>Estrategia full-funnel, CRM, dashboards (Looker Studio, GA4) y atribución de leads que sí se usa.</p></div>
+      <div class="card r"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V9l7-5 7 5v12M10 21v-6h4v6"/></svg></div><h3>Desarrollo de negocios</h3><p>Crecimiento desde cero: De la inteligencia de mercado a la captación y conversión (Bajío y Riviera Maya).</p></div>
+      <div class="card r"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9zM9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg></div><h3>IA aplicada</h3><p>Sistemas con agentes de IA para prospección, outreach B2B, lead scoring y detección de señales de mercado.</p></div>
+      <div class="card r"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><h3>Equipos comerciales</h3><p>Reclutamiento, onboarding y cadencias de accountability; manejo de equipos remotos de ventas.</p></div>
+    </div>
+    <div class="track r">
+      <span class="lbl">Trayectoria:</span>
+      <span class="chip"><span class="dot"></span>IBM</span>
+      <span class="chip"><span class="dot"></span>Sanmina</span>
+      <span class="chip"><span class="dot"></span>4 plus 1 Creative</span>
+      <span class="chip"><span class="dot"></span>Sinérgika</span>
+      <span class="chip ecochip"><span class="dot"></span><b>SafeBrok</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- 15 CTA -->
 <section class="sec hero" data-sec>
   <span class="aura"></span>
   <div class="inner ctawrap">
